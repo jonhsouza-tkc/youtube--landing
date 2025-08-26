@@ -1,12 +1,69 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.min.css">
     <link rel="stylesheet" href="./output.css">
     <title>Youtube</title>
 </head>
+
 <body>
-    
+
+    <!-- Header section -->
+    <header
+        class="fixed top-0 left-0 right-0 bg-white px-5 py-3 flex items-center justify-between border-b border-gray-300 z-20 ">
+        <div class=" flex items-center gap-4">
+            <button class="p-3 hover:bg-gray-100 cursor-pointer">
+                <i class="ri-menu-line text-2xl"></i>
+            </button>
+
+            <div class=" flex items-center gap-[2px] cursor-pointer">
+                <i class="ri-youtube-fill text-4xl text-red-600"></i>
+                <span class="text-xl font-semibold">Youtube</span>
+                <span class="text-[10px] text-gray-500">BR</span>
+            </div>
+
+        </div>
+
+        <!-- formulario -->
+
+        <form class="flex-1 max-w-2xl mx-4 flex ">
+
+            <input type="text" placeholder="Search" class="flex-1 px-4 py-2 border rounded-l-full rounded-r-0 ">
+
+            <button
+                class="px-6 py-2 border border-gray-400 rounded-l-0 rounded-r-full hover:bg-gray-100 cursor-pointer">
+                <i class="ri-search-line"></i>
+            </button>
+
+            <button class=" ml-4 px-3 py-2 border border-gray-400 rounded-full hover:bg-gray-100 cursor-pointer">
+                <i class="ri-mic-line"></i>
+            </button>
+        </form>
+
+        <!-- header actions -->
+
+        <nav class="flex items-center gap-5">
+
+            <button class="py-2 px-4 hover:bg-gray-100 cursor-pointer rounded-full">
+
+                <i class="ri-video-add-line text-xl"></i>
+            </button>
+
+            <button class="py-2 px-4 hover:bg-gray-100 cursor-pointer rounded-full">
+                <i class="ri-notification-3-line text-xl"></i>
+
+            </button>
+
+            <buttonn
+                class="py-2 px-4 font-semibold border rounded-full text-xl bg-orange-600 hover:bg-orange-500 cursor-pointer text-white">
+                J
+                </button>
+
+        </nav>
+    </header>
 </body>
+
 </html>
