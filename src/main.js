@@ -14,3 +14,26 @@ const videos = [
             { title: "TypeScript Tips & Tricks - Produtividade no Próximo Nível", channel: "TS Brasil", views: "145 mil", time: "há 6 dias", duration: "19:45", color: "rose", isLive: false }
         ];
 
+        // Renderização dos vídeos
+
+        const container = document.getElementById('videos');
+
+        videos.forEach((video, i) => {
+            const videoCard = document.createElement('article');
+            videoCard.className = 'cursor-pointer';
+            videoCard.innerHTML = `
+                <div class="relative bg-gray-200 rounded-xl overflow-hidden">
+                    <img src="https://picsum.photos/320/180?random=${i + 1}" alt="${video.title}" class="w-full h-full object-cover">
+                    <span class="absolute bottom-2 right-2 bg-black bg-opacity-80 text-white text-xs px-1 rounded">${video.duration}</span>
+                    ${video.isLive ? '<span class="absolute top-2 right-2 bg-red-600 text-white text-xs px-2 py-1 rounded uppercase font-semibold">Ao vivo</span>' : ''}
+                </div>
+                <div class="flex gap-3 mt-3">
+                    <div>
+                        <h3 class="font-medium text-sm line-clamp-2">${video.title}</h3>
+                        <p class="text-sm text-gray-600 mt-1">${video.channel}</p>
+                        <p class="text-sm text-gray-600">${video.isLive ? `${video.views} assistindo ${video.time}` : `${video.views} visualizações • ${video.time}`}</p>
+                    </div>
+                </div>
+            `;
+            container.appendChild(videoCard); 
+        });
